@@ -1,0 +1,38 @@
+select *  from [dbo].[Products] 
+--1)Write a query to get a Product list (id, name, unit price) where current products cost less than $20.
+SELECT [dbo].[Products].[ProductID] , 
+	   [dbo].[Products].[ProductName] , 
+	   [dbo].[Products].[UnitPrice] 
+	   FROM [dbo].[Products] 
+	   where [dbo].[Products].[UnitPrice] < 20
+
+--2)Write a query to get Product list (id, name, unit price) where products cost between $15 and $25
+SELECT [dbo].[Products].[ProductID] , 
+	   [dbo].[Products].[ProductName] , 
+	   [dbo].[Products].[UnitPrice] 
+	   FROM [dbo].[Products] 
+	   where [dbo].[Products].[UnitPrice] BETWEEN 15 AND 25
+
+--3)Write a query to get Product list (name, unit price) of above average price. 
+SELECT [dbo].[Products].[ProductName] , 
+	   [dbo].[Products].[UnitPrice] 
+	   FROM [dbo].[Products] 
+	   where [dbo].[Products].[UnitPrice] > (SELECT AVG([dbo].[Products].[UnitPrice]) FROM [dbo].[Products])
+
+--4)Write a query to get Product list (name, unit price) of ten most expensive products
+SELECT TOP 10 [dbo].[Products].[ProductName] , 
+	   [dbo].[Products].[UnitPrice] 
+	   FROM [dbo].[Products] 
+	   ORDER BY [dbo].[Products].[UnitPrice] DESC
+
+--5)Write a query to count current and discontinued products
+SELECT COUNT([dbo].[Products].[Discontinued])
+	   FROM [dbo].[Products]
+	   GROUP BY [dbo].[Products].[Discontinued]
+
+--6)Write a query to get Product list (name, units on order , units in stock) of stock is less than the quantity on order
+SELECT [dbo].[Products].[ProductID] , 
+	   [dbo].[Products].[UnitsInStock], 
+	   [dbo].[Products].[UnitsOnOrder] 
+	   FROM [dbo].[Products] 
+	   where [dbo].[Products].[UnitsInStock] < [dbo].[Products].[UnitsOnOrder]
