@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "SubmitCreateRequest";
+    Layout = "_LayoutCreateRequest";
+}
+<div class="row">
+    <div class="d-none d-lg-block col-4">
+    </div>
+    <div class="col-6 col-lg-4 options">
+        <h1>I am a..</h1>
+        <div>
+            <a asp-controller="PatientRequest" asp-action="PatientRequest"><button class="alert alert-info customer"><strong class="information">Patient</strong></button></a>
+        </div>
+        <div>
+            <a asp-controller="FamilyRequest" asp-action="FamilyRequest"><button class="alert alert-primary customer"><strong class="information">Family/Friends</strong></button></a>
+        </div>
+        <div>
+            <a asp-controller="ConciergeRequest" asp-action="ConciergeRequest"><button class="alert alert-success customer"><strong class="information">Conceirge</strong></button></a>
+        </div>
+        <div>
+            <a asp-controller="BusinessRequest" asp-action="BusinessRequest"><button class="alert alert-danger customer"><strong class="information">Business Partner</strong></button></a>
+        </div>
+    </div>
+    <div class="col-6 col-lg-4 back">
+        <a asp-controller="home" asp-action="Index"><button class="relogin bg-white">< Back</button></a>
+        @*<a asp-controller="home" asp-action="ReviewAgreement"><button class="relogin">< Review</button></a>
+        <a asp-controller="home" asp-action="AdminDashboard"><button class="relogin">< Admin Dashboard</button></a>*@
+
+
+        <a asp-controller="home" asp-action="ViewNotes"><button class="relogin bg-white">< ViewNotes</button></a>
+        <a asp-controller="home" asp-action="ViewCase"><button class="relogin bg-white">< ViewCase</button></a>
+
+
+       @* <a asp-controller="home" asp-action="ReviewAgreement"><button class="relogin">ReviewAgreement</button></a>*@
+    </div>
+</div>

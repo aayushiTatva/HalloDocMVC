@@ -1,0 +1,65 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+
+@model HalloDocMVC.Models.CountStatusWiseRequestModel
+@using static HalloDocMVC.Controllers.AdminController;
+<tbody class="bg-white">
+ @foreach(var item in Model.adminDashboardList)
+            {
+                <tr class="@Enum.GetName(typeof(RequestType), item.RequestTypeId) text-white border-bottom border-white">
+                    <td><small>@item.PatientName</small></td>
+                    <td>
+                        <button class="btn border-white text-white">
+                            <i class="fa-regular fa-envelope"></i>
+                        </button>
+                    </td>
+                    <td>
+                        <small>@item.DateOfBirth.ToString("MMM d , yyyy")</small>
+                    </td>
+                    <td><small>@item.Requestor</small></td>
+                    <td><small>@item.RequestedDate.ToString("MMM d , yyyy")</small></td>
+                    <td>
+                        <button class="btn border border-white text-white mt-2">
+                            <i class="fa-solid fa-phone pe-2"></i>
+                            <small>@item.PatientPhoneNumber</small>
+                        </button>                            
+                        <div>
+                            <small>(Patient)</small>
+                        </div>
+
+                        @if(item.RequestTypeId != 2){
+                            <button class="btn border border-white text-white mt-2">
+                                <i class="fa-solid fa-phone pe-2"></i>
+                                <small>@item.RequestorPhoneNumber</small>
+                            </button>
+                            <div>
+                                <small>
+                                    (@Enum.GetName(typeof(RequestType), item.RequestTypeId))
+                                </small>
+                            </div>
+                        }
+                    </td>
+                    <td><small>@item.Address</small></td>
+                    <td><small>Admin transferred to Dr. AGOLA</small></td>
+                    <td>
+                        <button class="btn border border-white text-white my-2">
+                            <small>Patient</small>
+                        </button>
+                        <button class="btn border border-white text-white my-2">
+                            <small>Provider</small>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn border border-white text-white my-2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <small>Actions</small>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i> View Case</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-card-checklist"></i> View Uploads</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-journals"></i> View Notes</a></li>
+                        </ul>
+
+                    </td>
+                </tr>
+            }
+</tbody>*@

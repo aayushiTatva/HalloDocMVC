@@ -1,0 +1,68 @@
+﻿﻿﻿@using static HalloDocMVC.Models.CV;
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/admin.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/HalloDoc.styles.css" asp-append-version="true" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.16/build/css/intlTelInput.css">
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.16/build/js/intlTelInput.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/styleDashboard.css" rel="stylesheet">
+    <title></title>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <!--Header begin--><!--For Dashboard layout-->
+        <!--Begin one row(hallodoc omg,logout,darkmode)-->
+        <div class="row header">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light hallodoc">
+                <div class="navbar-brand  " >
+                    <a href="#"><img src="~/images/Patient site 1.png"></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse " id="navbarSupportedContent" >
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item active welcome ms-auto">
+                            Welcome <b>@CV.UserName()</b>
+                        </li>
+                        <li class="nav-item logOut ms-auto">
+                            <button class="logOut">Logout</button>
+                        </li>
+                        <li class="nav-item darkMode ms-auto">
+                            <img src="~/images/moon image.png">
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <partial name="../Admin/_PartialViews/SubNavAdmin">
+        <!--Header end-->
+        <!--Main begin-->
+        <div class="conatiner-fluid">
+            @RenderBody()
+        </div>
+        <!--Main end-->
+        <!--Footer begin-->
+        <div class="footer" style="position: fixed;left: 0; bottom: 0; width: 100%;background-color: black; text-align: right;">
+            <a href="#" id="footer" style="color: grey;text-decoration: none;">Terms of Condition</a> <a href="" id="footer" style="color: grey;text-decoration: none;">I Privacy Policy &nbsp;&nbsp;</a>
+        </div>
+        <!--Footer end-->
+    </div>
+    <script src="../js/custom.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

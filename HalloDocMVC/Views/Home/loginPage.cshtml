@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = "_LayoutLogin";
+    ViewData["Title"] = "Login Page";
+}
+@model HalloDocMVC.DataModels.Aspnetuser
+<div class="container">
+    <div class="view min-vh-100">
+        <div class="row darkModeLogin">
+            <button class="change" onclick="myFunction()">
+                <image src="../images/moon image.png">
+            </button>
+        </div>
+        <div class="mainLogin bg-image">
+        </div>
+        <div class="mainLogin">
+            <div>
+                <a asp-controller="Home" asp-action="Index" class="backLogin"><b>< Back</b></a>
+            </div>
+            <div class="detailsLogin">
+                <p>Login To Your Account</p>
+                @ViewData["error"] @*to display error msg from loginController 'invalid username or password' if no username is inserted *@
+                <form class="form-horizontal" asp-action="Validate" asp-controller="Login" method="post">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control usernameLogin" id="email" name="Email" placeholder="username" style="width:380px;">
+                        <i class="fa fa-user-circle userLogin"></i>
+                        <label for="floatingInput">Username</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control passwordLogin" name="PasswordHash" placeholder="password" style="width:380px;">
+                        <label for="floatingInput">Password</label>
+                    </div>
+                    <button type="submit" class="logInBtnLogin">Log In</button>
+                    <div class="forgotPasswdLogin">
+                        <a id="forgotLogin" asp-controller="Home" asp-action="resetPassword2"><b>Forgot Password ?</b></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class=" tandcLogin">
+            <div><a href="#" id="tocLogin">Terms of conditions</a></div>
+            <div><a href="#" id="tocLogin">&nbsp;&nbsp;        Privacy Policy</a></div>
+        </div>
+    </div>
+</div>

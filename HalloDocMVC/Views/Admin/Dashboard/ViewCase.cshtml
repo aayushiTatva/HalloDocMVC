@@ -1,0 +1,95 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_LayoutAdminDashboard";
+}
+@model HalloDocMVC.Models.ViewDataPatientRequest
+<div class="container">
+    <div class="row">
+        <div class="col-6 d-flex">
+            <div><h4>New Request</h4></div>
+            <span class="rounded-3 bg-success text-white mx-3 p-1"><small>Patients</small></span>
+        </div>
+    </div>
+    <div class="row min-vh-100">
+        <form method="post" asp-controller="PatientRequest" asp-action="Create" enctype="multipart/form-data">
+            <div class="mt-5" style="box-shadow:  3px 5px 6px #ccc">
+                <h4>Patient Information</h4>  
+                <div class="mt-2"> Confirmation Number</div>
+                <div>
+                    <span class="text-info"> @*@CV.UserName()*@012021113220321320</span>
+                </div>
+                <div class="form-group-horizontal ">
+                    <div class=" row">
+                        <div class="col form-floating  space">
+                            <textarea asp-for="Symptoms" class="form-control shadow-none " id="symptons" placeholder="details"></textarea>
+                            <label for="symptons"> Enter Brief Details of Symptons(Optional)</label>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col form-floating  space">
+                            <input asp-for="FirstName" type="text" class="form-control shadow-none" id="fname" placeholder="details">
+                            <label for="fname"> First Name</label>
+                        </div>
+                        <div class="col form-floating  space">
+                            <input asp-for="LastName" type="text" class="form-control shadow-none" id="lname" placeholder="details">
+                            <label for="lname">Last Name</label>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-6 form-floating  space">
+                            <input asp-for="BirthDate" type="date" class="form-control shadow-none" id="dob" placeholder="Date of Birth">
+                            <label for="dob">Date Of Birth</label>
+                        </div>
+                        <div class="col-5 form-floating  space">
+                            <input asp-for="PhoneNumber" class="form-control shadow-none" type="tel" id="phone" placeholder="(201) 555-0123" />
+                            <label for="tel"></label>
+                        </div>
+                        <div class="col space">
+                            <button style="border-color:aqua;float:left"><i class="fa fa-phone" style="font-size:36px;color:aqua"></i></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 form-floating  space">
+                            <input asp-for="Email" type="email" class="form-control shadow-none" id="email" placeholder="details">
+                            <label for="emailid"> Email</label>
+                        </div>
+                    </div>
+                    <div class="row" >
+                        <h4>Location Information</h4>
+                        <div class="form-group-horizontal ">
+                            <div class="row">
+                                <div class="col-6 form-floating  space">
+                                    <input asp-for="Street" type="text" class="form-control shadow-none" id="region" placeholder="details">
+                                    <label for="region"> Region</label>
+                                </div>
+                                <div class="col-5 form-floating  space">
+                                    <input asp-for="City" type="text" class="form-control shadow-none" id="business" placeholder="details">
+                                    <label for="business">Business Name/ Address</label>
+                                </div>
+                                <div class="col space">
+                                    <button style="border-color:aqua;float:left"><i class='fa fa-map-marker' style='font-size:36px;color:aqua'></i></button>
+                                </div>
+                            </div><br />
+                            <div class="row">
+                                <div class="col-6 form-floating  space">
+                                    <input asp-for="RoomSuite" type="text" class="form-control shadow-none " id="room" placeholder="details">
+                                    <label for="room"> Room # I Suite (Optional)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row space">
+                        <div class="d-flex justify-content-end ">
+                            <button type="submit" class="submission bg-info rounded-2 border border-outline-info text-white ">Assign</button>
+                            <button type="submit" class="bg-info submission rounded-2 border border-outline-info text-white">View Notes</button>
+                            <button type="submit" class="bg-danger rounded-2 border border-outline-danger text-white" id="cancel">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+</div>

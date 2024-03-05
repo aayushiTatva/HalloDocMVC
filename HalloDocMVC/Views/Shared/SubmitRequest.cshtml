@@ -1,0 +1,72 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<div class="modal fade" id="requestBackdrop" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+                <h5>Create New Request</h5>
+                <a data-bs-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+            <div class="modal-body">
+                <p>Here, I want to create new request for ...</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn border border-info text-info mx-3" id="me">me</button>
+                    <button type="button" class="btn border border-info text-info" id="else">Someone else</button>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info text-white" id="cont">Continue</button>
+                <button type="button" class="btn border border-info text-info" data-bs-dismiss="modal">Cancel</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+<script>
+    let metemp = false;
+    let elsetemp = false;
+
+    $('#me').on('click', function () {
+        metemp = true;
+        elsetemp = false;
+        var element1 = document.getElementById("me");
+        element1.classList.remove("border-info");
+        element1.classList.remove("text-info");
+        element1.classList.add("bg-info");
+        element1.classList.add("text-white");
+        var element2 = document.getElementById("else");
+        element2.classList.remove("bg-info");
+        element2.classList.remove("text-white");
+        element2.classList.add("border-info");
+        element2.classList.add("text-info");
+    })
+    $('#else').on('click', function () {
+        elsetemp = true;
+        metemp = false;
+        var element1 = document.getElementById("me");
+        element1.classList.remove("bg-info");
+        element1.classList.remove("text-white");
+        element1.classList.add("border-info");
+        element1.classList.add("text-info");
+        var element2 = document.getElementById("else");
+        element2.classList.remove("border-info");
+        element2.classList.remove("text-info");
+        element2.classList.add("bg-info");
+        element2.classList.add("text-white");
+    })
+    $('#cont').on('click', function () {
+        if (metemp == true) {
+            window.location.href = "/RequestByPatient/RequestForMe";
+        }
+        else if (elsetemp == true) {
+            window.location.href = "/RequestByPatient/RequestForSomeoneelse";
+        }
+    })
+</script>

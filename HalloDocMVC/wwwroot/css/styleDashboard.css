@@ -1,0 +1,118 @@
+﻿.header {
+    border-bottom: 2px solid grey;
+}
+
+.welcome {
+    margin: 5px;
+}
+
+.darkMode {
+    margin: 5px;
+}
+
+.relogin {
+    float: right;
+    border-radius: 5px;
+    border-color: aqua;
+    color: aqua;
+}
+.logOut {
+    margin: 5px;
+    border-radius: 10px;
+    color: aqua;
+    border-color: aqua;
+}
+
+.hallodoc {
+    margin-top: -40px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    text-align: right;
+}
+
+#footer {
+    color: grey;
+    text-decoration: none;
+}
+
+.btn{
+    border:none;
+}
+li::marker {
+    font-size: 2.0rem;
+}
+.new {
+    background-color: #E9EAEF;
+    border: 2px solid #55649D;
+    color: #55649D;
+    text-align: left;
+}
+#news{
+    display:none;
+}
+#news:target{
+    display:block;
+}
+.pending {
+    background-color: #E5F2F8;
+    border: 2px solid #41B8D5;
+    color: #41B8D5;
+    text-align: left;
+}
+.actives {
+    background-color: #E9F0E8;
+    border: 2px solid #4E8150;
+    color: #4E8150;
+    text-align: left;
+}
+.conclude {
+    background-color: #F7E6EE;
+    border: 2px solid #A64676;
+    color: #A64676;
+    text-align: left;
+}
+.toClose {
+    background-color: #E6EDF5;
+    border: 2px solid #4A7DA5;
+    color: #4A7DA5;
+    text-align: left;
+}
+.unpaid {
+    background-color: #EFEEF4;
+    border: 2px solid #9D80BF;
+    color: #9D80BF;
+    text-align: left;
+}
+
+.patient {
+    background-color: #5fbc61;
+}
+
+.business {
+    background-color: #cd697b;
+}
+
+.Family {
+    background-color: #ed9124;
+}
+
+.Concierge {
+    background-color: #0a7cb9;
+}
+.submission {
+    border-color: aqua;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+#cancel {
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
