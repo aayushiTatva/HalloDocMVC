@@ -1,0 +1,498 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* LoginPage */
+
+#imgdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#details {
+    justify-content: center;
+}
+
+@media (max-width:992px) {
+    #details {
+        align-items: center;
+    }
+}
+
+#heroImage {
+    width: 576px;
+    height: 576px;
+    background: 0% 0% no-repeat padding-box;
+    box-shadow: 0px 4px 31px #0000000A;
+    border: 20px solid #FFFFFF;
+    opacity: 1;
+    display: flex;
+}
+
+#companyImage {
+    margin-top: 106px;
+    width: 272px;
+    height: 58px;
+}
+
+#info {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 500px;
+    height: 100px;
+    text-align: left;
+    font: normal normal 300 40px/47px Roboto;
+    letter-spacing: 0px;
+    color: #3E3E3E;
+    opacity: 1;
+}
+
+span {
+    font: normal normal 900 40px/53px Roboto;
+    letter-spacing: 0px;
+    color: #C8242F;
+}
+
+#loginText {
+    margin-bottom: 23.4px;
+    width: 261px;
+    height: 33px;
+    text-align: left;
+    font: normal normal normal 25px/33px Roboto;
+    letter-spacing: 0px;
+    color: #3E3E3E;
+    opacity: 1;
+}
+
+#uname {
+    width: 429px;
+    height: 49px;
+    padding: 14.5px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #ADADAD;
+    border-radius: 5px;
+    opacity: 1;
+}
+
+#pwd {
+    margin-top: 27px;
+    width: 429px;
+    height: 49px;
+    padding: 14.5px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #ADADAD;
+    border-radius: 5px;
+    opacity: 1;
+}
+
+#loginbtn {
+    margin-top: 30.5px;
+    width: 138px;
+    height: 45px;
+    background: #C8242F 0% 0% no-repeat padding-box;
+    border-radius: 23px;
+    opacity: 1;
+}
+
+#forgotpwd {
+    margin-top: 42.63px;
+    margin-left: 167px;
+    width: 121px;
+    height: 20px;
+    text-align: left;
+    font: normal normal normal 15px/20px Roboto;
+    letter-spacing: 0px;
+    color: #ADADAD;
+    opacity: 1;
+}
+
+::placeholder {
+    width: auto;
+    height: 20px;
+    font: normal normal normal 15px/20px Roboto;
+    letter-spacing: 0px;
+    color: #ADADAD;
+}
+
+#endtxt {
+    margin-top: 23px;
+    width: 164px;
+    height: 20px;
+    text-align: left;
+    font: normal normal normal 15px/20px Roboto;
+    letter-spacing: 0px;
+    color: #ADADAD;
+    opacity: 1;
+}
+
+#reg {
+    margin-top: 23px;
+    width: 88px;
+    height: 20px;
+    text-align: left;
+    font: normal normal normal 15px/20px Roboto;
+    letter-spacing: 0px;
+    color: #C8242F;
+    opacity: 1;
+}
+
+/* Dashboard */
+
+/* Navebar */
+#header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+#leftHeader {
+    display: flex;
+}
+
+#rightHeader {
+    display: flex;
+}
+
+#menuIcon {
+    margin: 34px 29px 34px 25px;
+    width: 40px;
+    height: 40px;
+}
+
+#headerLogo {
+    margin-top: 25px;
+    margin-right: 77px;
+}
+
+#searchIcon {
+    margin-top: 32px;
+    margin-right: 15px;
+    width: 16px;
+    height: 16px;
+}
+
+#searchText {
+    margin-top: 28.5px;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+#notificationIcon {
+    margin-top: 34px;
+    margin-right: 52px;
+    width: 22px;
+    height: 21px;
+}
+
+#profileImg {
+    margin-top: 24px;
+    margin-right: 12px;
+    width: 44px;
+    height: 44px;
+}
+
+#empName {
+    margin-top: 37px;
+    margin-right: 14.5px;
+    font: normal normal normal 16px/21px Roboto;
+}
+
+#downwardArrow {
+    margin-top: 37.5px;
+    margin-right: 43.5px;
+}
+
+#sideNav {
+    padding: 25px 30px;
+}
+
+/* Side Navbar */
+#navItemDashboard :hover {
+    background: #FFF3F4 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+}
+
+#navItemAnalysis :hover {
+    background: #FFF3F4 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+}
+
+.navImg {
+    margin: 14px 17.5px 14px 12.5px;
+    width: 15px;
+    height: 15px;
+}
+
+#navMainText {
+    margin-top: 10px;
+    width: 78px;
+    height: 21px;
+    font: normal normal normal 16px/21px Roboto;
+    color: #C8242F;
+}
+
+.navText {
+    margin-top: 10px;
+    width: 78px;
+    height: 21px;
+    font: normal normal normal 16px/21px Roboto;
+}
+
+/* Sale Information */
+
+.saleImg {
+    width: 35px;
+    height: 50px;
+    margin-right: 19.5px;
+}
+
+.myCard {
+    height: 116px;
+    background: #FFFFFF 0% 0% no-repeat;
+    align-items: center;
+    justify-content: center;
+}
+
+.myInfo {
+    font-size: 20px;
+    font: normal normal normal 15px/20px Roboto;
+    color: #3E3E3E;
+}
+
+.myData {
+    font-size: 33px;
+    font: normal normal medium 25px/33px Roboto;
+    color: #3E3E3E;
+}
+
+/* Sale Chart*/
+
+#dataGraph {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+#graphHeader {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+#leftGraphHeader {
+    display: flex;
+    font-size: 30px;
+    margin: 15px 29px;
+}
+
+#rightGraphHeader {
+    display: flex;
+    padding: 20.5px;
+    margin: 10px;
+}
+
+.rightGraphHeaderData {
+    padding: 0px 5px 5px 5px;
+    margin: 0px 5px 5px 5px;
+}
+
+#pieChart {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+}
+
+#pieChartHeader {
+    margin: 25px 29px;
+    font-size: 29px;
+    font: normal normal medium 22px/29px Roboto;
+    color: #3E3E3E;
+}
+
+#iconUSA {
+    width: 23px;
+    height: 33px;
+    margin-top: 5px;
+    margin-right: 10px;
+    color: #C8242F;
+}
+
+#iconCanada {
+    width: 23px;
+    height: 33px;
+    margin-top: 5px;
+    margin-right: 10px;
+    color: #A2B86C;
+}
+
+#iconRussia {
+    width: 23px;
+    height: 33px;
+    margin-top: 5px;
+    margin-right: 10px;
+    color: #F16C20;
+}
+
+#iconIndia {
+    width: 23px;
+    height: 33px;
+    margin-top: 5px;
+    margin-right: 10px;
+    color: #EBC844;
+}
+
+.countryName {
+    font-size: 20px;
+}
+
+@media (max-width:1200px) {
+    #pieChart {
+        margin-top: 25px;
+    }
+}
+
+/* Invoices */
+
+#invoice {
+    background: #FFFFFF 0% 0% no-repeat;
+}
+
+#invoiceHeader {
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+#invoiceLeftHeader {
+    display: flex;
+    margin: 22px 29px;
+    font-size: 30px;
+}
+
+#invoiceRightHeader {
+    display: flex;
+    margin-top: 26px;
+    margin-right: 29px;
+    font-size: 16px;
+}
+
+.table {
+    padding: 20px;
+}
+
+.paid {
+    background: #EBFFEF 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    border: none;
+}
+
+.failed {
+    background: #FFF5F5 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    border: none;
+}
+
+.pending {
+    background: #F8F8F8 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    border: none;
+}
+
+/* inner page*/
+
+.mainBody {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.header {
+    font-size: 30px;
+    font: normal normal medium 22px/29px Roboto;
+}
+
+.subheader {
+    font-size: 20px;
+    font: normal normal medium 18px/24px Roboto;
+}
+
+.formElement {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #ADADAD;
+    border-radius: 5px;
+    padding: 14.5px;
+}
+
+.form-group > input {
+    height: 50px;
+    margin-top: -23px;
+}
+
+.form-group > label {
+    top: -10px;
+    position: relative;
+    left: 20px;
+    background-color: white;
+}
+
+.focus {
+    top: -1px;
+}
+
+label {
+    color: #ADADAD;
+}
+
+input.disabled.form-control {
+    background-color: white;
+    border: 2px dashed #ADADAD;
+}
+
+span.text-danger {
+    font-size: 20px;
+}
+
+#uploadbtn {
+    width: 135px;
+    height: 50px;
+}
+
+#choosenfile {
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+input.form-check-input:checked {
+    background-color: #C8242F;
+    border-color: #C8242F;
+}
+
+.snackIcon {
+    width: 22px;
+    height: 22px;
+}
+
+.TabItem {
+    border: none !important;
+}
+
+    .TabItem:hover {
+        border-bottom: 2px solid #C8242F !important;
+    }
+
+#files {
+    visibility: hidden;
+}
+
+@media (max-width:992px) {
+    .respTwoColumn, .respSnackbar {
+        padding-top: 25px;
+    }
+}
+
+@media (max-width:1200px) {
+    .respThreeColumn, .respFourColumn {
+        padding-top: 25px;
+    }
+}

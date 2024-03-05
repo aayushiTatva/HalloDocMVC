@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Inner Page</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <!--Navbar-->
+    <nav>
+        <div id="header">
+            <div id="leftHeader">
+                <div>
+                    <a href=""><img id="menuIcon" src="images/menu-bar.png" /></a>
+                </div>
+                <div>
+                    <img id="headerLogo" src="images/logo.png" />
+                </div>
+                <form>
+                    <div class="d-flex flex-row">
+                        <img id="searchIcon" src="images/search-icon.png" />
+                        <input type="text" id="searchText" placeholder="Search">
+                    </div>
+                </form>
+            </div>
+            <div id="rightHeader">
+                <div>
+                    <img id="notificationIcon" src="images/notification-icon.png" />
+                </div>
+                <div class="d-flex flex-row">
+                    <img id="profileImg" src="images/profile.png" />
+                    <p id="empName">John Doe</p>
+                </div>
+                <div>
+                    <a href=""><img id="downwardArrow" src="images/downward-arrow.png" /></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--End Navbar-->
+
+
+    <div class="row">
+
+        <!--Side Navbar-->
+        <div class="col-2">
+            <div id="sideNav" class="d-flex flex-column">
+                <div class="d-flex flex-row">
+                    <img class="navImg" src="images/dashboard-default.png" />
+                    <a href="dashboard.html" style="text-decoration:none;"><p class="navText">Dashboard</p></a>
+                </div>
+                <div id="navItemAnalysis" class="d-flex flex-row">
+                    <img class="navImg" src="images/graph-active.png" />
+                    <p class="navText text-danger">Analysis</p>
+                </div>
+                <div class="d-flex flex-row">
+                    <img class="navImg" src="images/inbox-default.png" />
+                    <p class="navText">Inbox</p>
+                </div>
+                <div class="d-flex flex-row">
+                    <img class="navImg" src="images/clock-default.png" />
+                    <p class="navText">History</p>
+                </div>
+                <div class="d-flex flex-row">
+                    <img class="navImg" src="images/user-default.png" />
+                    <p class="navText">Users</p>
+                </div>
+                <div class="d-flex flex-row">
+                    <img class="navImg" src="images/maintenance-default.png" />
+                    <p class="navText">Maintenance</p>
+                </div>
+                <div class="d-flex flex-row">
+                    <img class="navImg" src="images/setting-default.png" />
+                    <p class="navText">Setting</p>
+                </div>
+            </div>
+        </div>
+        <!--End Side Navbar-->
+        <!--Main Screen-->
+        <div class="col-10" style="background: #FAFAFA;">
+            <div class="row m-4">
+                <h3>Analysis</h3>
+            </div>
+
+            <div class="mainBody m-3">
+                <!--One Column-->
+                <div>
+                    <p class="header font-weight-bold">One Column</p>
+                </div>
+                <form>
+                    <div>
+                        <input class="formElement" type="text" placeholder="Name" />
+                    </div>
+                    <div class="pt-4">
+                        <select class="formElement">
+                            <option>Dropdown</option>
+                        </select>
+                    </div>
+                    <div class="pt-4">
+                        <textarea class="formElement text-muted" rows="20" style="height:130px;">Multiple Line</textarea>
+                    </div>
+                </form>
+                <!--End One Column-->
+                <!--Two Column-->
+                <div>
+                    <p class="header font-weight-bold pt-4">Two Column</p>
+                </div>
+                <form>
+                    <div class="row">
+                        <div class="col-xl col-lg col-md-12 col-sm-12">
+                            <input class="formElement" type="text" placeholder="Name" />
+                        </div>
+                        <div class="col-xl col-lg col-md-12 col-sm-12 respTwoColumn">
+                            <div class="form-group">
+                                <label>Username</label>
+                                <input type="text" value="John Doe" class="form-control input-lg" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pt-4">
+                        <div class="col-xl col-lg col-md-12 col-sm-12">
+                            <input class="formElement" type="password" placeholder="Password" />
+                        </div>
+                        <div class="col-xl col-lg col-md-12 col-sm-12 respTwoColumn">
+                            <select class="formElement">
+                                <option>Dropdown</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+                <!--End Two Column-->
+                <!--Three Column-->
+                <div>
+                    <p class="header font-weight-bold pt-4">Three Column</p>
+                </div>
+                <form>
+                    <div class="row">
+                        <div class="col-xl col-lg-12 col-md-12 col-sm-12">
+                            <div class="form-group">
+                                <label>Focus</label>
+                                <input type="text" class="form-control input-lg border-danger" autofocus />
+                            </div>
+                        </div>
+                        <div class="col-xl col-lg-12 col-md-12 col-sm-12">
+                            <div class="form-group respThreeColumn">
+                                <label>Password</label>
+                                <input type="password" value="123456789" class="form-control input-lg" />
+                            </div>
+                        </div>
+                        <div class="col-xl col-lg-12 col-md-12 col-sm-12">
+                            <div class="form-group respThreeColumn">
+                                <label>Disabled</label>
+                                <input type="text" value="John Doe" class="disabled form-control" style="color: #ADADAD;" disabled />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!--End Three Column-->
+                <!--Four Column-->
+                <div>
+                    <p class="header font-weight-bold pt-4">Four Column</p>
+                    <div class="row">
+                        <div class="col-xl col-lg-6 col-md-12 col-sm-12 respFourColumn">
+                            <div class="form-group">
+                                <label class="text-danger">Designation</label>
+                                <input type="text" value="UI Designer" class="form-control input-lg border-danger" />
+                                <small class="form-text text-danger">Enter valid data</small>
+                            </div>
+                        </div>
+                        <div class="col-xl col-lg-6 col-md-12 col-sm-12 respFourColumn">
+                            <div class="form-group pt-4">
+                                <input type="text" placeholder="Name" class="form-control input-lg" />
+                                <small class="form-text text-muted">Enter your full name as per ID</small>
+                            </div>
+                        </div>
+                        <div class="col-xl col-lg-6 col-md-12 col-sm-12 respFourColumn">
+                            <div class="form-group">
+                                <label>Username</label>
+                                <input type="text" value="John Doe" class="form-control input-lg" />
+                            </div>
+                        </div>
+                        <div class="col-xl col-lg-6 col-md-12 col-sm-12 respFourColumn">
+                            <div class="form-group">
+                                <select class="formElement" disabled>
+                                    <option>Dropdown</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Four Column-->
+                <!--Other Design Elements-->
+                <div>
+                    <p class="header font-weight-bold pt-4">Other Design Elements</p>
+                </div>
+
+                <!--File Upload-->
+                <div class="d-flex justify-content-start">
+                    <button id="uploadbtn" class="border border-danger rounded-pill bg-white btn" onclick="document.getElementById('getFile').click()">
+                        <label for="files" class="btn">
+                            Upload
+                        </label>
+                    </button>
+                    <span id="choosenfile" class="text-muted">No file Choosen</span>
+                    <input id="files" type="file">
+                </div>
+                <!--End file upload-->
+                <!--Radio Btn-->
+                <div>
+                    <p class="subheader font-weight-bold pt-4">Radio button</p>
+                    <div class="d-flex flex-row">
+                        <div class="form-check m-2">
+                            <input class="form-check-input" name="opt" type="radio" id="flexRadioDefault1" />
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Option 1
+                            </label>
+                        </div>
+                        <div class="form-check m-2">
+                            <input class="form-check-input" name="opt" type="radio" id="flexRadioDefault2" checked />
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Option 2
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!--End Radio Btn-->
+                <!--Checkbox-->
+                <div>
+                    <p class="subheader font-weight-bold pt-4">Checkbox</p>
+                    <div class="d-flex flex-row">
+                        <div class="form-check m-2">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Option 1
+                            </label>
+                        </div>
+                        <div class="form-check m-2">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Option 2
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!--End Checkbox-->
+                <!--Snackbar-->
+                <div>
+                    <p class="subheader font-weight-bold pt-4">Snackbar</p>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="d-flex border border-danger rounded p-2">
+                            <img class="snackIcon" src="images/error-icon.png" />
+                            <p class="text-danger ms-2 mb-0">This is an error message</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 respSnackbar">
+                        <div class="d-flex border border-info rounded p-2">
+                            <img class="snackIcon" src="images/info-icon.png" />
+                            <p class="text-info ms-2 mb-0">This is an information message</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-4">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="d-flex border border-warning rounded p-2">
+                            <img class="snackIcon" src="images/warning-icon.png" />
+                            <p class="text-warning ms-2 mb-0">This is a warning message</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 respSnackbar">
+                        <div class="d-flex border border-success rounded p-2">
+                            <img class="snackIcon" src="images/success-icon.png" />
+                            <p class="text-success ms-2 mb-0">This is a success message</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End Snackbar-->
+                <!--Call to action-->
+                <div>
+                    <p class="subheader font-weight-bold pt-4">Call to action</p>
+                </div>
+                <div class="d-flex">
+                    <div>
+                        <button type="button" class="btn btn-danger rounded-pill m-2">Primary</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-outline-danger rounded-pill m-2" >Secondary</button>
+                    </div>
+                </div>
+                <!--End Call to action-->
+                <!--Tabs-->
+                <div>
+                    <p class="subheader font-weight-bold pt-4">Tabs</p>
+                </div>
+
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active text-secondary TabItem" id="nav-tab1-tab" data-bs-toggle="tab" data-bs-target="#nav-tab1" type="button" role="tab" aria-controls="nav-tab1" aria-selected="true">Tab 1</button>
+                        <button class="nav-link TabItem text-secondary" id="nav-tab2-tab" data-bs-toggle="tab" data-bs-target="#nav-tab2" type="button" role="tab" aria-controls="nav-tab2" aria-selected="false">Tab 2</button>
+                        <button class="nav-link TabItem text-secondary" id="nav-tab3-tab" data-bs-toggle="tab" data-bs-target="#nav-tab3" type="button" role="tab" aria-controls="nav-tab3" aria-selected="false">Tab 3</button>
+                    </div>
+                </nav>
+                <div class="tab-content m-3" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-tab1" role="tabpanel" aria-labelledby="nav-tab1-tab" tabindex="0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur laborum labore itaque illo beatae nam, voluptas eligendi fugiat commodi incidunt non sit consectetur, eaque cumque animi ullam. Et, animi odit voluptate, id iusto unde ipsa excepturi natus ratione repellendus commodi magni molestiae doloremque earum voluptatem minima. Dignissimos deserunt culpa beatae eveniet, voluptatibus itaque quia numquam dicta quibusdam optio minima esse maiores. Odit culpa magnam, provident praesentium excepturi nisi illum tenetur obcaecati accusantium, porro eum iusto! Amet fugit ipsa veniam. Eius, cum! Mollitia eos, excepturi sequi atque impedit fuga quisquam voluptatem sapiente non ratione iure ipsam repudiandae tempore, debitis obcaecati possimus.</div>
+                    <div class="tab-pane fade" id="nav-tab2" role="tabpanel" aria-labelledby="nav-tab2-tab" tabindex="0">Aspernatur laborum labore itaque illo beatae nam, voluptas eligendi fugiat commodi incidunt non sit consectetur, eaque cumque animi ullam. Et, animi odit voluptate, id iusto unde ipsa excepturi natus ratione repellendus commodi magni molestiae doloremque earum voluptatem minima. Dignissimos deserunt culpa beatae eveniet, voluptatibus itaque quia numquam dicta quibusdam optio minima esse maiores. Odit culpa magnam, provident praesentium excepturi nisi illum tenetur obcaecati accusantium, porro eum iusto! Amet fugit ipsa veniam. Eius, cum! Mollitia eos, excepturi sequi atque impedit fuga quisquam voluptatem sapiente non ratione iure ipsam repudiandae tempore, debitis obcaecati possimus.</div>
+                    <div class="tab-pane fade" id="nav-tab3" role="tabpanel" aria-labelledby="nav-tab3-tab" tabindex="0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur laborum labore itaque illo beatae nam, voluptas eligendi fugiat commodi incidunt non sit consectetur, eaque cumque animi ullam. Et, animi odit voluptate, id iusto unde ipsa excepturi natus ratione repellendus commodi magni molestiae doloremque earum voluptatem minima. Dignissimos deserunt culpa beatae eveniet, voluptatibus itaque quia numquam dicta quibusdam optio minima esse maiores. Odit culpa magnam, provident praesentium excepturi nisi illum tenetur obcaecati accusantium, porro eum iusto! Amet fugit ipsa veniam. Eius, cum! Mollitia eos, excepturi sequi atque impedit fuga quisquam voluptatem sapiente non ratione iure ipsam repudiandae tempore, debitis obcaecati possimus.</div>
+                </div>
+                <!--End Tabs-->
+                <!--End Other Design Elements-->
+            </div>
+        </div>
+        <!--End Main Screen-->
+    </div>
+</body>
+</html>
